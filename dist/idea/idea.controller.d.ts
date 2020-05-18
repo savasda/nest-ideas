@@ -10,6 +10,8 @@ export declare class IdeaController {
     readIdea(id: string): Promise<import("./idea.dto").IdeaRO>;
     updateIdea(id: string, user: string, data: Partial<IdeaDTO>): Promise<import("./idea.dto").IdeaRO>;
     destroyIdea(id: string, user: any): Promise<import("./idea.dto").IdeaRO>;
-    bookmarkIdea(id: string, user: string): void;
-    unBookmarkIdea(id: string, user: string): void;
+    bookmarkIdea(id: string, user: string): Promise<import("../user/user.dto").UserRO>;
+    unBookmarkIdea(id: string, user: string): Promise<import("../user/user.dto").UserRO>;
+    upvote(id: string, user: string): Promise<import("./idea.dto").IdeaRO>;
+    downvote(id: string, user: string): Promise<import("./idea.dto").IdeaRO>;
 }

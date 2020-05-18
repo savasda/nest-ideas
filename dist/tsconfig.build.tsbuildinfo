@@ -2638,20 +2638,28 @@
         "signature": "9c4247c6631b302066a03d22a210b4d28bb892d2b57631a651981e5d5fcdcb69"
       },
       "../src/user/user.entity.ts": {
-        "version": "e39694723f4e87f924b6c4bb22ad7c317b1d5aa0d89fd6537775ba9c716ebd1f",
+        "version": "e0d836b35ab9ea6e6bb7023adc4e421d5494866969fa22d77211b3e14a2fce20",
         "signature": "6011ef42a213e78c9577cfe0738f8e420ad5d868ea93b9a1eea27a4911368209"
       },
+      "../src/comment/comment.entity.ts": {
+        "version": "c54e091d98b4de32bd4415c399dc1b37f563913825b0f9e6ea05184182675d9d",
+        "signature": "dade5674bbcf1955d5f3f355fefbf1e8e5dfa5be56cb139b82d0584224dd30fb"
+      },
       "../src/idea/idea.entity.ts": {
-        "version": "9feaf97c15a54adf395445b165c60bb0645905f018fa461068173c4e6ed560ce",
-        "signature": "d2fe2ecc41c76d655f142062552a4ec3765dd0284c3908e53f65c9f6b80abf9d"
+        "version": "383f7a6c5357fb7221fde4c9cccbdd8687876f92af88b5fbd7bc5145d724dd12",
+        "signature": "1844e7d6561ecaed2833b0f4dab6a0d6100320e3daa564888b6cfb56b71760c2"
       },
       "../src/idea/idea.dto.ts": {
-        "version": "a385bb9ad33a627b7aaeff67f09741ef471275b4a4ea7574c8fd189c4e10b039",
+        "version": "3470418f8e5dddb52ac0f761cb1b27a6531878c5cc84887645b8c7753235c384",
         "signature": "5e2f41da6d6c865ebedfcf4eeed0bf1d333d56e3069417f98634af4046fe429f"
       },
+      "../src/shared/votes.enum.ts": {
+        "version": "325b49502933d1af4d0c9886d9b3420f0e03c861343e5f5935a101bf86818429",
+        "signature": "e1f883c1937c0ab3ba3751f9722f895799ac4b8767a406d2e98b5b6cb885568a"
+      },
       "../src/idea/idea.service.ts": {
-        "version": "90e4b8338e516370fe1a1f639053ee5d08facd999887df0c80b0109b9e03a0ae",
-        "signature": "cfdd8c972283c6b81a304905ad93adac8a88936030d4df3a96ab4197614aae07"
+        "version": "77f90ae84a9b44b96f7b08a492b60f4bcbff3b620d7df64173db321eb68d9a36",
+        "signature": "006afeea1076682a4f38428f571d5668ebeae2418a26e83cc96d5fb5cadefc7e"
       },
       "../node_modules/class-transformer/ClassTransformOptions.d.ts": {
         "version": "d89af0c250e1424959162beae79f2c2745c729d6ab8028503d322395d96d3a2b",
@@ -2694,11 +2702,11 @@
         "signature": "e6a8d52a32820289984efeed61a9b9bf43d3d0094c9cc331b6181adf047b4fa8"
       },
       "../src/idea/idea.controller.ts": {
-        "version": "74911b737870b3d661bca90004a25cfb1ba8713c117830a8285e08f4ab0246c1",
-        "signature": "f402d254daa45806bcdc189c92f871cca2fef2c0227a2c6c3e98eb6912a1b148"
+        "version": "091a756231fad873b84f19b18eda39abbfee2783888a7c0c50c39d29dc8af570",
+        "signature": "17382b7b276b6f957b75b04c851ffa8f1852695a14c1e3e10ebc3bc6fa6d269b"
       },
       "../src/idea/idea.module.ts": {
-        "version": "cb28228f7be814b700a8b0e1bca98120b83edfdbcf9db1daac56ee3288b767ee",
+        "version": "7b9ef494c2f8102b74f558ea07548de4c17560b3fcd41e00595c310c182afae4",
         "signature": "d79f3d4c77d44997597b9c4f711b26a6a2dbb3a43a6e398cd94dc1785b5fcd51"
       },
       "../node_modules/@types/range-parser/index.d.ts": {
@@ -3298,7 +3306,7 @@
         "signature": "4838cf7c87f4c3e47a3fb619c004961761a314791c4e3e32ee1e46f97e84072e"
       },
       "../src/user/user.service.ts": {
-        "version": "0a34a0c189795c8c82cb1edc7279bd85fe332ca54242b4d208a6d17e2562e9c5",
+        "version": "18eb74bb953b91e2810f7a99160bdc416e9f073816616145d8b88b84adc134c1",
         "signature": "e26a61526b63375f46c51fd7b71a70022039192be103c8314ef96e6e05586651"
       },
       "../src/user/user.controller.ts": {
@@ -3309,8 +3317,24 @@
         "version": "59da388c08ea660ea14d0d7a8851963eee44b5162d4665b134a860904a4dff34",
         "signature": "482b8f0d35a3d453500a15b6c6057c1e4c40baa4329b39da9e1026d8e1de4329"
       },
+      "../src/comment/comment.dto.ts": {
+        "version": "b88289d20f8fb566421e033bd8aa4c04f7bbdc9e5809f57ae52031a0cedda108",
+        "signature": "9d3714339e6c116d22ce24a45b6118db5d2d9e4cde3c910d5aa30119eb6c8f0f"
+      },
+      "../src/comment/comment.service.ts": {
+        "version": "5570affd221dabbafc94ca4f8b2997de8fcfef3001b92688adbf2c7a68a32bcf",
+        "signature": "e770dffafa50be87a672d9d24183ea3eab0bfcb33ca3050e2fbb273f7809fe33"
+      },
+      "../src/comment/comment.controller.ts": {
+        "version": "2ea12372f591ee1bb571118b9378b034cd354f8b7c59f051d426d84b7c784151",
+        "signature": "cf804e1b2e7b8c5e869b13d7b098934b64f86bb302de01499bfec7d27d2ed9d6"
+      },
+      "../src/comment/comment.module.ts": {
+        "version": "a941842af1a4f5f743683b80841e268eae00cccd7be4c937ae65ba3adb6fc5f0",
+        "signature": "4369d448739e3965956ba81a97fa053f67d8b5a75edfbed914f44228e0bdff04"
+      },
       "../src/app.module.ts": {
-        "version": "24104b37909b6afbb20f9a6589e7253296a42bc5ee11520a221b21d5885a4c84",
+        "version": "04f89165cd1e7bf5baaec8684df68316149975c4114ac6d62e5dffc21a4e97d8",
         "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644"
       },
       "../node_modules/dotenv/types/index.d.ts": {
@@ -9654,10 +9678,20 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/comment/comment.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/user/user.entity.ts",
+        "../src/idea/idea.entity.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../src/idea/idea.entity.ts": [
         "../node_modules/typeorm/index.d.ts",
         "../src/user/user.entity.ts",
-        "../node_modules/@types/node/os.d.ts",
+        "../src/comment/comment.entity.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
@@ -9673,6 +9707,13 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/shared/votes.enum.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../src/idea/idea.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/typeorm/index.d.ts",
@@ -9680,6 +9721,7 @@
         "../node_modules/@nestjs/typeorm/index.d.ts",
         "../src/idea/idea.dto.ts",
         "../src/user/user.entity.ts",
+        "../src/shared/votes.enum.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
@@ -9793,6 +9835,7 @@
         "../node_modules/@nestjs/typeorm/index.d.ts",
         "../src/idea/idea.entity.ts",
         "../src/user/user.entity.ts",
+        "../src/comment/comment.entity.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
@@ -11273,6 +11316,55 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/comment/comment.dto.ts": [
+        "../node_modules/class-validator/types/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/comment/comment.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../src/comment/comment.entity.ts",
+        "../node_modules/typeorm/index.d.ts",
+        "../src/user/user.entity.ts",
+        "../src/idea/idea.entity.ts",
+        "../src/comment/comment.dto.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/comment/comment.controller.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/comment/comment.service.ts",
+        "../src/shared/auth.guard.ts",
+        "../src/shared/validation.pipe.ts",
+        "../src/user/user.decorator.ts",
+        "../src/comment/comment.dto.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/comment/comment.module.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../src/comment/comment.controller.ts",
+        "../src/comment/comment.service.ts",
+        "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../src/idea/idea.entity.ts",
+        "../src/user/user.entity.ts",
+        "../src/comment/comment.entity.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../src/app.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/app.controller.ts",
@@ -11283,6 +11375,7 @@
         "../node_modules/@nestjs/core/index.d.ts",
         "../src/shared/logging.interceptor.ts",
         "../src/user/user.module.ts",
+        "../src/comment/comment.module.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
@@ -17766,8 +17859,13 @@
         "../src/idea/idea.entity.ts",
         "../src/user/user.dto.ts"
       ],
+      "../src/comment/comment.entity.ts": [
+        "../src/user/user.entity.ts",
+        "../src/idea/idea.entity.ts"
+      ],
       "../src/idea/idea.entity.ts": [
-        "../src/user/user.entity.ts"
+        "../src/user/user.entity.ts",
+        "../src/comment/comment.entity.ts"
       ],
       "../src/idea/idea.dto.ts": [
         "../src/user/user.dto.ts"
@@ -17847,6 +17945,7 @@
       ],
       "../src/idea/idea.controller.ts": [
         "../src/idea/idea.dto.ts",
+        "../src/user/user.dto.ts",
         "../src/idea/idea.service.ts"
       ],
       "../node_modules/@types/range-parser/index.d.ts": [
@@ -19283,6 +19382,18 @@
         "../src/user/user.dto.ts",
         "../src/user/user.service.ts"
       ],
+      "../src/comment/comment.service.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/comment/comment.entity.ts",
+        "../src/user/user.entity.ts",
+        "../src/idea/idea.entity.ts",
+        "../src/comment/comment.dto.ts"
+      ],
+      "../src/comment/comment.controller.ts": [
+        "../src/comment/comment.entity.ts",
+        "../src/comment/comment.service.ts",
+        "../src/comment/comment.dto.ts"
+      ],
       "../node_modules/dotenv/types/index.d.ts": [
         "../node_modules/@types/node/ts3.7/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
@@ -20275,8 +20386,11 @@
       "../node_modules/class-validator/types/index.d.ts",
       "../src/user/user.dto.ts",
       "../src/user/user.entity.ts",
+      "../src/comment/comment.entity.ts",
       "../src/idea/idea.entity.ts",
       "../src/idea/idea.dto.ts",
+      "../src/shared/votes.enum.ts",
+      "../src/idea/idea.service.ts",
       "../node_modules/class-transformer/ClassTransformOptions.d.ts",
       "../node_modules/class-transformer/ClassTransformer.d.ts",
       "../node_modules/class-transformer/metadata/ExposeExcludeOptions.d.ts",
@@ -20287,6 +20401,8 @@
       "../src/shared/validation.pipe.ts",
       "../src/shared/auth.guard.ts",
       "../src/user/user.decorator.ts",
+      "../src/idea/idea.controller.ts",
+      "../src/idea/idea.module.ts",
       "../node_modules/@types/range-parser/index.d.ts",
       "../node_modules/@types/qs/index.d.ts",
       "../node_modules/@types/express-serve-static-core/index.d.ts",
@@ -20439,6 +20555,9 @@
       "../src/user/user.service.ts",
       "../src/user/user.controller.ts",
       "../src/user/user.module.ts",
+      "../src/comment/comment.dto.ts",
+      "../src/comment/comment.service.ts",
+      "../src/app.module.ts",
       "../node_modules/dotenv/types/index.d.ts",
       "../src/main.ts",
       "../src/idea/idea/idea.service.ts",
@@ -20482,10 +20601,8 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/idea/idea.service.ts",
-      "../src/idea/idea.module.ts",
-      "../src/idea/idea.controller.ts",
-      "../src/app.module.ts"
+      "../src/comment/comment.controller.ts",
+      "../src/comment/comment.module.ts"
     ]
   },
   "version": "3.8.3"

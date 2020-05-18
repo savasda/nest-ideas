@@ -17,10 +17,28 @@ const typeorm_1 = require("typeorm");
 const idea_entity_1 = require("./idea.entity");
 const typeorm_2 = require("@nestjs/typeorm");
 const user_entity_1 = require("../user/user.entity");
+const votes_enum_1 = require("../shared/votes.enum");
 let IdeaService = class IdeaService {
     constructor(ideaRepository, userRepository) {
         this.ideaRepository = ideaRepository;
         this.userRepository = userRepository;
+    }
+    async vote(idea, user, vote) {
+        const opposite = vote === votes_enum_1.Votes.UP ? votes_enum_1.Votes.DOWN : votes_enum_1.Votes.UP;
+        if (idea[opposite].filter(voter => voter.id === user.id).length > 0 ||
+            idea[vote].filter(voter => voter.id === user.id).length > 0) {
+            idea[opposite] = idea[opposite].filter(voter => voter.id !== user.id);
+            idea[vote] = idea[vote].filter(voter => voter.id !== user.id);
+            await this.ideaRepository.save(idea);
+        }
+        else if (idea[vote].filter(voter => voter.id === user.id).length < 1) {
+            idea[vote].push(user);
+            await this.ideaRepository.save(idea);
+        }
+        else {
+            throw new common_1.HttpException('Unable to cast vote', common_1.HttpStatus.BAD_REQUEST);
+        }
+        return idea;
     }
     toResponseObject(idea) {
         const responseObject = Object.assign(Object.assign({}, idea), { author: idea.author ? idea.author.toResponseObject(false) : null });
@@ -38,7 +56,8 @@ let IdeaService = class IdeaService {
         }
     }
     async showAll() {
-        const ideas = await this.ideaRepository.find({ relations: ['author', 'upvotes', 'downvotes']
+        const ideas = await this.ideaRepository.find({
+            relations: ['author', 'upvotes', 'downvotes'],
         });
         return ideas.map(idea => this.toResponseObject(idea));
     }
@@ -51,7 +70,7 @@ let IdeaService = class IdeaService {
     async read(id) {
         const idea = await this.ideaRepository.findOne({
             where: { id },
-            relations: ['author'],
+            relations: ['author', 'upvotes', 'downvotes'],
         });
         if (!idea)
             throw new common_1.HttpException('Not found', common_1.HttpStatus.NOT_FOUND);
@@ -86,7 +105,10 @@ let IdeaService = class IdeaService {
     }
     async bookmark(id, userId) {
         const idea = await this.ideaRepository.findOne({ where: { id } });
-        const user = await this.userRepository.findOne({ where: { id: userId }, relations: ['bookmarks'] });
+        const user = await this.userRepository.findOne({
+            where: { id: userId },
+            relations: ['bookmarks'],
+        });
         if (user.bookmarks.filter(bookmark => bookmark.id === idea.id).length < 1) {
             user.bookmarks.push(idea);
             await this.userRepository.save(user);
@@ -98,8 +120,11 @@ let IdeaService = class IdeaService {
     }
     async unbookmark(id, userId) {
         const idea = await this.ideaRepository.findOne({ where: { id } });
-        const user = await this.userRepository.findOne({ where: { id: userId }, relations: ['bookmarks'] });
-        if (user.bookmarks.filter(bookmark => bookmark.id === idea.id).length < 1) {
+        const user = await this.userRepository.findOne({
+            where: { id: userId },
+            relations: ['bookmarks'],
+        });
+        if (user.bookmarks.filter(bookmark => bookmark.id === idea.id).length > 0) {
             user.bookmarks = user.bookmarks.filter(bookmark => bookmark.id !== idea.id);
             await this.userRepository.save(user);
         }
@@ -107,6 +132,24 @@ let IdeaService = class IdeaService {
             throw new common_1.HttpException('Idea already bookmarked', common_1.HttpStatus.BAD_REQUEST);
         }
         return user.toResponseObject();
+    }
+    async upvote(id, userId) {
+        let idea = await this.ideaRepository.findOne({
+            where: { id },
+            relations: ['author', 'upvotes', 'downvotes'],
+        });
+        const user = await this.userRepository.findOne({ where: { id: userId } });
+        idea = await this.vote(idea, user, votes_enum_1.Votes.UP);
+        return this.toResponseObject(idea);
+    }
+    async downvote(id, userId) {
+        let idea = await this.ideaRepository.findOne({
+            where: { id },
+            relations: ['author', 'upvotes', 'downvotes'],
+        });
+        const user = await this.userRepository.findOne({ where: { id: userId } });
+        idea = await this.vote(idea, user, votes_enum_1.Votes.DOWN);
+        return this.toResponseObject(idea);
     }
 };
 IdeaService = __decorate([

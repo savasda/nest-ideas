@@ -7,12 +7,12 @@ import {
   OneToMany,
   ManyToOne,
   JoinTable,
+  ManyToMany,
 } from 'typeorm'
 import * as bcrypt from 'bcryptjs'
 import * as jwt from 'jsonwebtoken'
 import { UserRO } from './user.dto'
 import { IdeaEntity } from 'src/idea/idea.entity'
-
 
 @Entity('user')
 export class UserEntity {
@@ -34,7 +34,7 @@ export class UserEntity {
   @OneToMany(type => IdeaEntity, idea => idea.author)
   ideas: IdeaEntity[]
 
-  @ManyToOne(type => IdeaEntity, {cascade: true})
+  @ManyToMany(type => IdeaEntity, { cascade: true })
   @JoinTable()
   bookmarks: IdeaEntity[]
 
@@ -52,7 +52,7 @@ export class UserEntity {
     if (this.ideas) {
       responseObject.ideas = this.ideas
     }
-    if(this.bookmarks) {
+    if (this.bookmarks) {
       responseObject.bookmarks = this.bookmarks
     }
     return responseObject

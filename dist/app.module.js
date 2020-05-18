@@ -15,11 +15,12 @@ const http_errors_filter_1 = require("./shared/http-errors.filter");
 const core_1 = require("@nestjs/core");
 const logging_interceptor_1 = require("./shared/logging.interceptor");
 const user_module_1 = require("./user/user.module");
+const comment_module_1 = require("./comment/comment.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     common_1.Module({
-        imports: [typeorm_1.TypeOrmModule.forRoot(), idea_module_1.IdeaModule, user_module_1.UserModule],
+        imports: [typeorm_1.TypeOrmModule.forRoot(), idea_module_1.IdeaModule, user_module_1.UserModule, comment_module_1.CommentModule],
         controllers: [app_controller_1.AppController],
         providers: [
             app_service_1.AppService,

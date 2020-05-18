@@ -22,7 +22,7 @@ let UserService = class UserService {
     }
     async showAll() {
         const users = await this.userRepository.find({
-            relations: ['ideas', 'bookmarks']
+            relations: ['ideas', 'bookmarks'],
         });
         return users.map(user => user.toResponseObject(false));
     }

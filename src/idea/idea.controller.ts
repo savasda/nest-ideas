@@ -8,7 +8,7 @@ import {
   Param,
   UsePipes,
   UseGuards,
-  Logger
+  Logger,
 } from '@nestjs/common'
 import { IdeaService } from './idea.service'
 import { IdeaDTO } from './idea.dto'
@@ -67,14 +67,29 @@ export class IdeaController {
 
   @Post(':id/bookmark')
   @UseGuards(new AuthGuard())
-  bookmarkIdea(@Param('id') id: string, @User('id') user: string){
-    this.lodData({id, user});
+  bookmarkIdea(@Param('id') id: string, @User('id') user: string) {
+    this.lodData({ id, user })
+    return this.ideaService.bookmark(id, user)
   }
 
   @Delete(':id/bookmark')
   @UseGuards(new AuthGuard())
-  unBookmarkIdea(@Param('id') id: string, @User('id') user: string){
-    this.lodData({id, user});
+  unBookmarkIdea(@Param('id') id: string, @User('id') user: string) {
+    this.lodData({ id, user })
+    return this.ideaService.unbookmark(id, user)
   }
 
+  @Post(':id/upvote')
+  @UseGuards(new AuthGuard())
+  upvote(@Param('id') id: string, @User('id') user: string) {
+    this.lodData({ id, user })
+    return this.ideaService.upvote(id, user)
+  }
+
+  @Post(':id/downvote')
+  @UseGuards(new AuthGuard())
+  downvote(@Param('id') id: string, @User('id') user: string) {
+    this.lodData({ id, user })
+    return this.ideaService.downvote(id, user)
+  }
 }

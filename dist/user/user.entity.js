@@ -63,7 +63,7 @@ __decorate([
     __metadata("design:type", Array)
 ], UserEntity.prototype, "ideas", void 0);
 __decorate([
-    typeorm_1.ManyToOne(type => idea_entity_1.IdeaEntity, { cascade: true }),
+    typeorm_1.ManyToMany(type => idea_entity_1.IdeaEntity, { cascade: true }),
     typeorm_1.JoinTable(),
     __metadata("design:type", Array)
 ], UserEntity.prototype, "bookmarks", void 0);

@@ -49,9 +49,19 @@ let IdeaController = IdeaController_1 = class IdeaController {
     }
     bookmarkIdea(id, user) {
         this.lodData({ id, user });
+        return this.ideaService.bookmark(id, user);
     }
     unBookmarkIdea(id, user) {
         this.lodData({ id, user });
+        return this.ideaService.unbookmark(id, user);
+    }
+    upvote(id, user) {
+        this.lodData({ id, user });
+        return this.ideaService.upvote(id, user);
+    }
+    downvote(id, user) {
+        this.lodData({ id, user });
+        return this.ideaService.downvote(id, user);
     }
 };
 __decorate([
@@ -111,6 +121,22 @@ __decorate([
     __metadata("design:paramtypes", [String, String]),
     __metadata("design:returntype", void 0)
 ], IdeaController.prototype, "unBookmarkIdea", null);
+__decorate([
+    common_1.Post(':id/upvote'),
+    common_1.UseGuards(new auth_guard_1.AuthGuard()),
+    __param(0, common_1.Param('id')), __param(1, user_decorator_1.User('id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String, String]),
+    __metadata("design:returntype", void 0)
+], IdeaController.prototype, "upvote", null);
+__decorate([
+    common_1.Post(':id/downvote'),
+    common_1.UseGuards(new auth_guard_1.AuthGuard()),
+    __param(0, common_1.Param('id')), __param(1, user_decorator_1.User('id')),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String, String]),
+    __metadata("design:returntype", void 0)
+], IdeaController.prototype, "downvote", null);
 IdeaController = IdeaController_1 = __decorate([
     common_1.Controller('api/idea'),
     __metadata("design:paramtypes", [idea_service_1.IdeaService])

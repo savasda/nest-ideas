@@ -6,6 +6,7 @@ export declare class IdeaService {
     private ideaRepository;
     private userRepository;
     constructor(ideaRepository: Repository<IdeaEntity>, userRepository: Repository<UserEntity>);
+    private vote;
     private toResponseObject;
     private enshureOwnership;
     showAll(): Promise<Array<IdeaRO>>;
@@ -15,4 +16,6 @@ export declare class IdeaService {
     destroy(id: string, userId: string): Promise<IdeaRO>;
     bookmark(id: string, userId: string): Promise<import("../user/user.dto").UserRO>;
     unbookmark(id: string, userId: string): Promise<import("../user/user.dto").UserRO>;
+    upvote(id: string, userId: any): Promise<IdeaRO>;
+    downvote(id: string, userId: any): Promise<IdeaRO>;
 }
